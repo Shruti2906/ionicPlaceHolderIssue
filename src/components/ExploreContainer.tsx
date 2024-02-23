@@ -1,3 +1,4 @@
+import { IonInput } from '@ionic/react';
 import './ExploreContainer.css';
 
 interface ContainerProps { }
@@ -5,8 +6,25 @@ interface ContainerProps { }
 const ExploreContainer: React.FC<ContainerProps> = () => {
   return (
     <div id="container">
-      <strong>Ready to create an app?</strong>
-      <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+{/* no placeholder is getting displayed for both of these input fields if there type=date/time */}
+
+        <IonInput
+          type="date"
+          fill="outline"
+          color="medium"
+          placeholder="End_Date"
+          name="end_date"
+          style={{width:200}}
+        />
+        <IonInput
+        type="time"
+        fill="outline"
+        color="medium"
+        placeholder="Time"
+        name="Time"
+        style={{width:'200px'}}
+       />
     </div>
   );
 };
